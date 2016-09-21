@@ -32,11 +32,11 @@ public class TestEmail {
 		driver.findElement(By.id("Username")).sendKeys(username);
 		driver.findElement(By.id("Password")).clear();
 		driver.findElement(By.id("Password")).sendKeys(password);
-		driver.findElement(By.xpath(".//*[@value='Войти']")).click();
+		driver.findElement(By.xpath(".//*[@value='Р’РѕР№С‚Рё']")).click();
 		
 		Thread.sleep(7000);
 		
-		String title = "Входящие — Яндекс.Почта";
+		String title = "Р’С…РѕРґСЏС‰РёРµ вЂ” РЇРЅРґРµРєСЃ.РџРѕС‡С‚Р°";
 		if (driver.getTitle().contains(title)){
 		System.out.println("Logged in sucessfully !!!"+driver.getTitle());
 		}
@@ -45,7 +45,7 @@ public class TestEmail {
 		}
 		
 		String numberOfLetters = driver.findElement(By.xpath(".//*[@class='mail-NestedList-Item-Info-Extras']")).getText();
-		System.out.println("Numbers of letters" + numberOfLetters);
+		System.out.println("Numbers of letters = " + numberOfLetters);
 
 		driver.quit();
 		}
