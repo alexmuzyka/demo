@@ -32,7 +32,7 @@ public class TestEmail {
 		driver.findElement(By.id("Username")).sendKeys(username);
 		driver.findElement(By.id("Password")).clear();
 		driver.findElement(By.id("Password")).sendKeys(password);
-		driver.findElement(By.xpath(".//*[@value='Войти']")).click();
+		driver.findElement(By.xpath("//*[@type='submit']")).click();
 		
 		Thread.sleep(7000);
 		
